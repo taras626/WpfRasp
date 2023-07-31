@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfRasp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfRasp"
+        mc:Ignorable="d"
+        Title="Расписание" Height="453" Width="537" ResizeMode="CanMinimize" Icon="/icons8-расписание-64.png">
+    <Grid x:Name="Faculty_Group_Grid">
+        <Button x:Name="btn_GetTimeTable" Content="Показать расписание" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Height="39" Width="256" Click="btn_GetTimeTable_Click"/>
+        <Button x:Name="btn_AddNewGroup" Grid.Row="0" Content="Добавить недостающие группы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Margin="21,140,0,0" Click="btn_AddNewGroup_Click"/>
+        <Button x:Name="btn_DeleteAllGroups" Grid.Row="0" Content="Удалить группы" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Width="220" Margin="287,140,0,0" Click="btn_DeleteAllGroups_Click"/>
+        <Button x:Name="btn_ConfigEdit" Content="Настроить конфигурацию" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Height="39" Width="256" Click="btn_ConfigEdit_Click"/>
+        <ComboBox x:Name="cb_Month" HorizontalAlignment="Left" Margin="138,244,0,0" VerticalAlignment="Top" Width="120" Height="35"/>
+        <ComboBox x:Name="cb_Faculties" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Height="35" Margin="287,20,0,0" SelectionChanged="cb_Faculties_SelectionChanged"/>
+        <ComboBox x:Name="cb_Groups" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="220" Height="35" Margin="21,20,0,0" IsReadOnly="True"/>
+        <Label x:Name="Title_Time" Content="Промежуток времени" HorizontalAlignment="Center" Height="26" Width="137" VerticalAlignment="Top" Margin="0,195,0,0"/>
+        <Label x:Name="Title_Time_Copy" Content="Месяц" HorizontalAlignment="Left" Height="26" Width="120" VerticalAlignment="Top" Margin="138,218,0,0"/>
+        <Label x:Name="Title_Time_Copy1" Content="Год" HorizontalAlignment="Left" Height="26" Width="120" VerticalAlignment="Top" Margin="273,218,0,0"/>
+        <ProgressBar x:Name="pb_WaitingExcel" HorizontalAlignment="Center" Height="21" Margin="0,353,0,0" VerticalAlignment="Top" Width="254" IsIndeterminate="True" Visibility="Hidden"/>
+        <RadioButton x:Name="rb_ListGroups" GroupName="AddGroup" Content="Список групп" HorizontalAlignment="Left" Margin="104,116,0,0" VerticalAlignment="Top" Checked="rb_ListGroups_Checked"/>
+        <RadioButton x:Name="rb_OneGroup" GroupName="AddGroup" Content="Одну группу" HorizontalAlignment="Center" Margin="0,116,0,0" VerticalAlignment="Top" Checked="rb_OneGroup_Checked"/>
+        <RadioButton x:Name="rb_Faculty" GroupName="AddGroup" Content="Факультет" HorizontalAlignment="Left" Margin="333,116,0,0" VerticalAlignment="Top" Checked="rb_Faculty_Checked"/>
+        <TextBox x:Name="tb_Year" HorizontalAlignment="Left" Margin="273,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="35"/>
+        <TextBox x:Name="tb_NewGroup" HorizontalAlignment="Center" Margin="0,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Height="35"/>
+    </Grid>
+
+</Window>
